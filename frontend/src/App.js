@@ -1,5 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import Login from './pages/Login';
+import Registration from './pages/Registration';
 
 const Soon = ({n}) => (
   <div style={{padding:'2rem', fontFamily:'sans-serif', textAlign:'center'}}>
@@ -13,8 +15,8 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/"             element={<Navigate to="/login" replace />} />
-        <Route path="/login"        element={<Soon n="Login - M1" />} />
-        <Route path="/register"     element={<Soon n="Registration - M2" />} />
+        <Route path="/login"        element={<Login />} />
+        <Route path="/register"     element={<Registration />} />
         <Route path="/subscription" element={<Soon n="Subscription - M3" />} />
         <Route path="/payment"      element={<Soon n="Payment - M4" />} />
         <Route path="/super-admin"  element={<Soon n="Super Admin - M5/M6" />} />
