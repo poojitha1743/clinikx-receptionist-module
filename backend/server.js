@@ -13,7 +13,8 @@ app.use(express.json());
 
 
 app.use('/api/auth',            require('./routes/authRoutes'));
-app.use('/api/clinics',     require('./routes/clinicRoutes'));        
+app.use('/api/clinics',     require('./routes/clinicRoutes'));  
+app.use("/api/patients", require("./routes/patientRoutes"));      
 
 
 app.get('/', (req, res) => res.json({ message: 'ClinikX API running' }));

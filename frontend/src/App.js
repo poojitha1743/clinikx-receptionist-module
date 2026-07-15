@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './pages/Login';
 import Registration from './pages/Registration';
+import Receptionist from "./pages/Receptionist";
 
 const Soon = ({n}) => (
   <div style={{padding:'2rem', fontFamily:'sans-serif', textAlign:'center'}}>
@@ -21,7 +22,7 @@ export default function App() {
         <Route path="/payment"      element={<Soon n="Payment - M4" />} />
         <Route path="/super-admin"  element={<Soon n="Super Admin - M5/M6" />} />
         <Route path="/clinic-admin" element={<Soon n="Clinic Admin - M7/M8/M9" />} />
-        <Route path="/receptionist" element={<Soon n="Receptionist - M10/M11" />} />
+        <Route path="/receptionist" element={<Receptionist />} />
         <Route path="/doctor"       element={<Soon n="Doctor - M12/M13" />} />
       </Routes>
     </BrowserRouter>
